@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FarmApp</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'/>
+
+    <!--Fontawesom-->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css"/>
+
+    <!--Animated CSS-->
+    <link rel="stylesheet" type="text/css" href="~/css/animate.min.css"/>
+
+
+    <!-- Bootstrap -->
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--Bootstrap Carousel-->
+    <link type="text/css" rel="stylesheet" href="~/css/carousel.css" />
+
+    <link rel="stylesheet" href="~/css/isotope/style.css"/>
+
+    <!--Main Stylesheet-->
+    <link href="~/css/styles.css" rel="stylesheet"/>
+    <!--Responsive Framework-->
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body data-spy="scroll" data-target="#header">
+    <div id="page-container">
+        <header>
+            <section id="header">
+                <div class="header-area">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 zero_mp">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="header_menu text-center" data-spy="affix" data-offset-top="50" id="nav">
+                        <div class="container">
+                            <nav class="navbar navbar-default zero_mp ">
+
+                                <div class="navbar-header">
+                                    <a asp-controller="Home" asp-action="Index"><img src="~/img/989c9c96-7200-431c-898b-3000fee3ed7d_200x200.png" class="mylogo" alt="FarmApp" /></a>
+                                    <!--<a id="mynvbar" class="navbar-brand custom_navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FarmApp</a>-->
+                                </div>
+
+                                <div class="collapse navbar-collapse zero_mp " id="bs-example-navbar-collapse-1">
+
+                                    <partial name="_LoginPartial" />
+                                    <ul class="nav navbar-nav navbar-right main_menu">
+                                        <li class="active"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">ΑΡΧΙΚΗ</a></li>
+                                        <li><a class="nav-link text-light" asp-area="" asp-controller="Category" asp-action="Index">ΖΩΑ</a></li>
+                                        <li><a class="nav-link text-light" asp-area="" asp-controller="Vaccines" asp-action="Index">ΕΜΒΟΛΙΑ</a></li>
+
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <div>
+            <main role="main" class="pb-3" style="padding-bottom: 100px;">
+                @RenderBody()
+            </main>
+        </div>
+
+        <section id="footer">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-6">
+                        <div class="copyright">
+                            <p>Developed By Babis Markos</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="designer">
+                            <p>Developer Babis Markos</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End of row-->
+            </div>
+            <!--End of container-->
+        </section>
+    </div>
+    <!--End of footer-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-1.12.3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!--Counter UP Waypoint-->
+    <script src="~/js/waypoints.min.js"></script>
+    <!--Counter UP-->
+    <script src="~/js/jquery.counterup.min.js"></script>
+
+    <script>
+        //for counter up
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    </script>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['Ιανουάριος', 'Φεβρουάριος', 'Μάρτιος', 'Απρίλιος', 'Μάιος', 'Ιούνιος', 'Ιόύλιος', 'Αύγουστος', 'Σεπτέμβριος', 'Οκτώμβριος', 'Νοέμβριος', 'Δέκεμβριος' ],
+                datasets: [{
+                    label: 'Γαλακτομέτρηση ανά Μήνα',                 
+                    borderColor: '#4DA91C',
+                    fill: false,
+                    borderWidth: 6,
+                    data: [200, 600, 0, 300, 400, 100, 540, 650, 500, 460, 267]
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+
+   
+
+    <!--Isotope-->
+    <script src="~/js/isotope/min/scripts-min.js"></script>
+    <script src="~/js/isotope/cells-by-row.js"></script>
+    <script src="~/js/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/js/isotope/packery-mode.pkgd.min.js"></script>
+    <script src="~/js/isotope/scripts.js"></script>
+
+
+    <!--Back To Top-->
+    <script src="~/js/backtotop.js"></script>
+
+
+    <!--JQuery Click to Scroll down with Menu-->
+    <script src="~/js/jquery.localScroll.min.js"></script>
+    <script src="~/js/jquery.scrollTo.min.js"></script>
+    <!--WOW With Animation-->
+    <script src="~/js/wow.min.js"></script>
+    <!--WOW Activated-->
+    <script>
+        new WOW().init();
+    </script>
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript-->
+    <script src="~/js/main.js"></script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

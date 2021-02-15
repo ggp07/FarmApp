@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="category-title">Κατηγορίες</h2>
+
+<div class="category-div">
+    <div>
+        <h3 class="category-txt">Πρόβατα</h3>
+        <a asp-area="" asp-controller="Sheep" asp-action="Index"> <img src="~/img/provato.jpg" class="img-category" alt="πρόβατο" /></a>
+    </div>
+    <div>
+        <h3 class="category-txt">Αγελάδες</h3>
+        @*  <a asp-area="" asp-controller="Cow" asp-action="Index"> </a> *@ <img src="~/img/αγελαδα.jpg" class="img-category" alt="αγελάδα" />
+    </div>
+    <div>
+        <h3 class="category-txt">Κατσίκια</h3>
+        @*<a asp-area="" asp-controller="goat" asp-action="Index"> </a>*@ <img class="goat-img img-category" src="~/img/γιδι.jpg" alt="κατσίκι" />
+    </div>
+    <div>
+        <h3 class="category-txt">Γουρούνια</h3>
+        @*<a asp-area="" asp-controller="Pig" asp-action="Index">*@ <img src="~/img/γουρουνι.jpg" class="img-category img-pig" alt="γουρούνι" /></a>
+    </div>
+</div>
+
+

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<FarmAppV2.Models.Sheep>
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+
+<h1>Τα Πρόβατά μου</h1>
+
+<p>
+    <a asp-action="Create" class="vol_cust_btn">Προσθήκη Νέου</a>
+
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SheepName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MothersName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FathersName)
+            </th>
+            <th>
+                <!-- @Html.DisplayNameFor(model => model.Miscarriage)--> Έχει αποβάλλει σε γέννα
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SheepName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MothersName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FathersName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Miscarriage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Owner.Id)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SheepId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.SheepId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.SheepId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<canvas id="myChart"></canvas>

@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+<div>
+    <section id="slider">
+        <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="slider_overlay">
+                        <img class="img-carousel" src="~/img/img1.jpg" alt="...">
+                        <div class="carousel-caption">
+                            <div class="slider_text">
+                                <h3 style="text-transform:none">Καλωσήλθες</h3>
+                                <p style="text-transform:none; font-size:25px">Εδώ μπορείς να κρατάς σημειώσεις για την κατάσταση της φάρμας σου γρήγορα και αποτελεσματικά.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of item With Active-->
+                <div class="item">
+                    <div class="slider_overlay">
+                        <img class="img-carousel" src="~/img/img2.jpg" alt="...">
+                        <div class="carousel-caption">
+                            <div class="slider_text">
+                                <h3 style="text-transform:none">Καλωσήλθες</h3>
+                                <p style="text-transform:none; font-size:25px">Εδώ μπορείς να κρατάς σημειώσεις για την κατάσταση της φάρμας σου γρήγορα και αποτελεσματικά.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Item-->
+                <div class="item">
+                    <div class="slider_overlay">
+                        <img class="img-carousel" src="img/img3.jpg" alt="...">
+                        <div class="carousel-caption">
+                            <div class="slider_text">
+                                <h3 style="text-transform:none">Καλωσήλθες</h3>
+                                <p style="text-transform:none; font-size:25px">Εδώ μπορείς να κρατάς σημειώσεις για την κατάσταση της φάρμας σου γρήγορα και αποτελεσματικά.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of item-->
+            </div>
+            <!--End of Carousel Inner-->
+        </div>
+    </section>
+    <!--end of slider section-->
+</div>
+<section id="welcome">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wel_header">
+                    <h2 style="font-size: 36px; text-transform: none; font-weight: 700; padding-bottom: 25px; font-family: 'Roboto Slab', serif !important;color: #4c2400; text-align:left;">Τι μπορώ να κάνω στο FarmApp</h2>
+                </div>
+            </div>
+        </div>
+        <!--End of row-->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="item">
+                    <div class="single_item">
+                        <div class="item_list">
+
+                            <h4>Δημιουργια Ζωων</h4>
+                            <p>Κατέγραψε την κατάσταση της φάρμας σου ώστε να μπορείς να βλέπεις όλες τις πληροφοριές που χρειάζεσαι για τα ζώα σου.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of col-md-3-->
+            <div class="col-md-3">
+                <div class="item">
+                    <div class="single_item">
+                        <div class="item_list">
+                            <h4>Δημιουργια Εμβολιων</h4>
+                            <p>Δημιούργησε μία κατάσταση με τα εμβόλια σου ώστε να μπορείς να σημειώνεις στο κάθε ζώο ποιο εμβόλιο έχει κάνει και πότε το έκανε.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of col-md-3-->
+            <div class="col-md-3">
+                <div class="item">
+                    <div class="single_item">
+                        <div class="item_list">
+                            <h4>Γαλακτομετρηση</h4>
+                            <p>Κατέγραψε πόσο γάλα σου παράγει το κάθε ζώο ώστε να γνωρίζεις ακριβώς την ποσότητα που σου προσφέρει.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--End of col-md-3-->
+        </div>
+        <!--End of row-->
+    </div>
+    <!--End of container-->
+</section>
+
+
+<section id="volunteer">
+    <div class="container">
+        <div class="row vol_area">
+            <div class="col-md-8">
+                <div class="volunteer_content">
+                    <h3>Γινε μελος στο <span>Farmapp</span></h3>
+                    <p>Κάνε την εγγραφή σου και γίνε μέλος στην καλύτερη πλατφόρμα κατάστασης φάρμας.</p>
+                </div>
+            </div>
+            <!--End of col-md-8-->
+            <div class="col-md-3 col-md-offset-1">
+                <div class="join_us">
+                    <a  asp-area="Identity" asp-page="/Account/Register" class="vol_cust_btn">Εγγραφη</a>
+                </div>
+            </div>
+            <!--End of col-md-3-->
+        </div>
+        <!--End of row and vol_area-->
+    </div>
+    <!--End of container-->
+</section>
+
+
